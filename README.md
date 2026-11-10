@@ -2,7 +2,8 @@
 
 A static, no-JavaScript-required dossier site built from the verified
 Christchurch methamphetamine register (1982–2026). Twelve chapters, 78 case
-records, 40 carried-forward archive files, 57 cited sources.
+records, 40 carried-forward archive files, 57 cited sources, 34 judgment
+paragraphs quoted verbatim on the labs page.
 
 **Presentation:** true-crime case-file aesthetic — condensed poster type, black
 / bone / blood-red palette, chapter numbering, evidence stamps, redaction
@@ -27,6 +28,7 @@ Any static host works. No build step, no server, no external requests
 | `players.html` | All 78 case records; client-side search + legal-position filter |
 | `timeline.html` | Chapter chronology 1982 → 2026 |
 | `sentences.html` | The sentence shift: every source-supported term plotted by chapter, with era medians and a caveat block |
+| `labs.html` | The labs, in the judgments: every laboratory address named in the Granite sentencing notes and the Court of Appeal judgment, quoted paragraph by paragraph, plus the addresses the record leaves blank |
 | `archive.html` | The original 40-case laboratory archive, unedited (accordion) |
 | `sources.html` | Source register 1–57, deep-linked from every citation chip |
 | `method.html` | Rules, identity traps, corrections, open items |
@@ -57,7 +59,7 @@ original archive HTML, writes the whole `site/` tree. Deterministic output.
 ```
 site/
   index.html
-  players.html  timeline.html  sentences.html  archive.html  sources.html  method.html
+  players.html  timeline.html  sentences.html  labs.html  archive.html  sources.html  method.html
   chapters/01-airport-job.html … 12-the-streets.html
   assets/style.css  app.js  favicon.svg
   assets/fonts/BebasNeue-400.woff2  Oswald-400.woff2
