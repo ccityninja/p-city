@@ -269,3 +269,48 @@ footer{border-top:1px solid var(--line);margin-top:clamp(56px,9vw,110px);padding
   .card,.person,.panel{break-inside:avoid}
   .chapter-head{border-color:#111}
 }
+
+/* ---------- sentence trend ---------- */
+.scale{margin-top:18px;border:1px solid var(--line);background:#0b0b0f;padding:16px 18px 8px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.srow{display:grid;grid-template-columns:212px minmax(0,1fr) 76px;gap:14px;align-items:center;padding:6px 0;border-bottom:1px solid rgba(243,238,227,.05)}
+.srow:last-child{border-bottom:0}
+.slab{font-family:var(--label);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);line-height:1.35}
+.slab b{color:var(--blood);font-weight:600;margin-right:7px}
+.slab em{display:block;font-style:normal;color:var(--faint);font-size:9.5px;letter-spacing:.18em;margin-top:3px}
+.strack{position:relative;height:26px;border-left:1px solid var(--line-hard);background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px calc(100% / 6))}
+.dot{position:absolute;top:50%;width:9px;height:9px;border-radius:50%;transform:translate(-50%,-50%);display:block}
+.dot.prison{background:var(--blood);box-shadow:0 0 0 2px rgba(207,18,51,.20)}
+.dot.hd{background:var(--amber);box-shadow:0 0 0 2px rgba(217,163,60,.18)}
+.med{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--bone);opacity:.5}
+.sval{font-family:var(--mono);font-size:11px;color:var(--dim);text-align:right}
+.srow.axis{border-bottom:0;padding:2px 0 0}
+.srow.axis .slab{color:var(--faint)}
+.srow.axis .sval{color:var(--faint);font-size:9.5px;text-transform:uppercase;letter-spacing:.14em}
+.srow.axis .strack{height:auto;background:none;display:flex;justify-content:space-between;border-left:1px solid var(--line-hard)}
+.srow.axis .strack span{font-family:var(--mono);font-size:9.5px;color:var(--faint);transform:translateX(-50%);white-space:nowrap}
+.srow.axis .strack span:first-child{transform:none}
+.obss{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:14px}
+.obs{background:#0e0e12;padding:20px 22px}
+.obs b{display:block;font-family:var(--display);font-size:46px;line-height:.88;color:var(--blood);font-weight:400}
+.obs span{display:block;font-family:var(--label);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin:7px 0 11px;line-height:1.4}
+.obs p{margin:0;font-size:14px;line-height:1.55;color:#cfc8bb}
+@media(min-width:880px){.obss{grid-template-columns:repeat(3,1fr)}}
+table.eratable th:first-child{width:15%}
+table.eratable th:nth-child(2){width:37%}
+table.eratable th:nth-child(3){width:11%}
+table.eratable th:last-child{width:auto;text-align:left}
+table.eratable td:last-child{text-align:left}
+table.eratable td:nth-child(n+3){font-family:var(--mono);font-size:12.5px;color:#d9d2c5}
+table.termtable th:first-child{width:56px}
+table.termtable th:nth-child(2){width:36%}
+table.termtable th:nth-child(3){width:120px}
+table.termtable th:last-child{width:92px}
+.termtable td.term{font-family:var(--mono);font-size:12.5px;color:var(--bone);white-space:nowrap}
+.termtable td.term em{font-style:normal;color:var(--amber);font-size:9.5px;letter-spacing:.12em}
+.termtable td.srccell{text-align:right;white-space:nowrap}
+@media(max-width:720px){
+  .srow{grid-template-columns:1fr;gap:7px;padding:10px 0}
+  .sval{text-align:left}
+  .strack{height:22px}
+  .srow.axis .slab,.srow.axis .sval{display:none}
+}

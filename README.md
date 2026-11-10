@@ -26,6 +26,7 @@ Any static host works. No build step, no server, no external requests
 | `chapters/*.html` | One chapter per investigation: cold open, evidence stamps, record note, dossier cards, outcome table, documented connections, prev/next |
 | `players.html` | All 78 case records; client-side search + legal-position filter |
 | `timeline.html` | Chapter chronology 1982 → 2026 |
+| `sentences.html` | The sentence shift: every source-supported term plotted by chapter, with era medians and a caveat block |
 | `archive.html` | The original 40-case laboratory archive, unedited (accordion) |
 | `sources.html` | Source register 1–57, deep-linked from every citation chip |
 | `method.html` | Rules, identity traps, corrections, open items |
@@ -56,7 +57,7 @@ original archive HTML, writes the whole `site/` tree. Deterministic output.
 ```
 site/
   index.html
-  players.html  timeline.html  archive.html  sources.html  method.html
+  players.html  timeline.html  sentences.html  archive.html  sources.html  method.html
   chapters/01-airport-job.html … 12-the-streets.html
   assets/style.css  app.js  favicon.svg
   assets/fonts/BebasNeue-400.woff2  Oswald-400.woff2
